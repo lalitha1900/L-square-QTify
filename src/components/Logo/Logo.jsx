@@ -1,7 +1,7 @@
 import React from 'react'
 import LogoImage from "../../assets/logo.png"
 const Logo = () => {
-	const style = {'padding-left':'32px'};
+	const style = {'margin-left':'37px'};
   return (
    
         <img style={style} src={LogoImage} alt='logo' width={67} />
