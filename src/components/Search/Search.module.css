@@ -19,10 +19,12 @@
     height: 100%;
     border: 1px solid #121212;
     border-left: none;
-    cursor: pointer;
 	background-color: white;
 	background-image:url(../../assets/search-icon.png) no-repeat;
 	background: url(../../assets/search-icon.png) no-repeat;
     background-position: center;
     background-color: white;
+}
+.searchButton:hover{
+	cursor: pointer;
 }
