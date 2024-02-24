@@ -1,9 +1,9 @@
 import React from 'react'
-import BrandLogo from "../../assets/logo.png"
+import LogoImage from "../../assets/logo.png"
 const Logo = () => {
   return (
     <div>
-        <img src={BrandLogo} alt='logo' width={67} />
+        <img src={LogoImage} alt='logo' width={67} />
         </div>
   )
 }
