@@ -1,17 +1,36 @@
-.HeroContainer {
-    height: 270px;
+
+  /* HeroSection.module.css */
+
+:root {
+    --hero-background-color: black;
+    --text-color: white;
+  }
+  
+  .herosection {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    color: #fff;
-    /* background-color: bisque; */
+    background-color: var(--hero-background-color);
+    color: var(--text-color);
+    width: 100%;
+    height: 100vh; /* Adjust the height based on your design */
   }
-  .HeroText {
+  
+  .heroImg {
+    width: 100%; /* Ensure the image takes up the full width of the container */
+    max-width: 600px; /* Adjust the max-width based on your design */
+    margin-top: 20px; /* Adjust the margin based on your design */
+  }
+  
+  .heroText {
     text-align: center;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif; /* Adjust the font family based on your design */
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin: 0; /* Remove default margin for the h1 element */
+    margin-bottom: 10px; /* Adjust the margin based on your design */
   }
+  
