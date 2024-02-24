@@ -1,23 +1,16 @@
-import React from "react";
-import styles from "./HeroSection.module.css";
-import Headphone from "../../assets/hero_headphones.png";
+import React from 'react';
+import styles from "./HeroSection.module.css";  
 
-const HeroSection = () => {
-	return (
-		<>
-			<div className={styles.wrapper}>
-				<div className={styles.heroImageWrapper}>
-					<div className={styles.banner}>
-						<h1>100 Thousand Songs, ad-free</h1>
-						<h1>Over thousands podcast episodes</h1>
-					</div>
-					<div>
-						<img src={Headphone} alt="Headphone" height="212px" width="212px" />
-					</div>
-				</div>
-			</div>
-		</>
-	);
-};
+const YourComponent = () => {
+  return (
+    <div className="hero-section">
+      <img src="../../assets/hero_headphone.png" alt="Hero Image" />
+      <div className="hero-text">
+        <p>100 Thousand Songs, ad-free</p>
+        <p>Over thousands podcast episodes</p>
+      </div>
+    </div>
+  );
+}
 
-export default HeroSection;
+export default YourComponent;
