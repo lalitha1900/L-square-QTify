@@ -9,7 +9,7 @@ const NavBar = () => {
     <nav className={styles.navBar}>
       <Logo/>
       <Search/>
-      <Button children="GIVE FEEDBACK" />
+      <Button children="Give Feedback" />
     </nav>
   );
 };
