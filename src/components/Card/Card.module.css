@@ -84,3 +84,16 @@ body{
   .borderGreen{
     border-top: 1px solid green;
   }
+  .sectionHeaderDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+  }
+.showAll{
+  color: green;
+  border: none;
+  background: none;
+  font-size: 17px;
+  cursor:pointer;
+}

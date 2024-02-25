@@ -39,9 +39,9 @@ const CardCategory = ({category,header}) => {
       
     return (
     <section className={`${category} ${Styles.backgroundBlack} ${Styles.borderGreen}`}>
-      <div>
+      <div className={Styles.sectionHeaderDiv}>
         <h1 className="albumHeading">{header}</h1>
-        <button onClick={toggleShowAll} className="showAll">{btnLabel}</button>
+        <button onClick={toggleShowAll} className={Styles.showAll}>{btnLabel}</button>
       </div>
     <section className="cardSection"> 
    
