@@ -7,7 +7,7 @@ const Card = ({ data, type }) => {
     switch (type) {
       case "album": {
         const { image, follows, title, songs } = data;
-        console.log(songs,"songs")
+        console.log(image, follows, title, songs,data ,"songs")
 
         return (
           <Tooltip title={`${songs.length} songs`} placement="top" arrow >
@@ -18,7 +18,7 @@ const Card = ({ data, type }) => {
                   <Chip
                     className={Styles.chip}
                     label={`${follows} Follows`}
-                    Follows
+                    
                     size="small"
                   />
                 </div>
@@ -34,6 +34,7 @@ const Card = ({ data, type }) => {
         return <></>;
     }
   };
+  console.log(data,type);
   return getCard(type);
 };
 
