@@ -1,16 +1,13 @@
-import React from 'react';
-import styles from "./HeroSection.module.css";  
-
-const YourComponent = () => {
+import   HeroImg  from "../../assets/hero_headphones.png";
+import styles from "./HeroSection.module.css";
+export default function HeroSection() {
   return (
-    <div className="hero-section">
-      <img src="../../assets/hero_headphone.png" alt="Hero Image" />
-      <div className="hero-text">
-        <p>100 Thousand Songs, ad-free</p>
-        <p>Over thousands podcast episodes</p>
+    <section className={styles.herosection}>
+      <div className={styles.headerDiv}>
+        <h1 className={styles.heroText}>100 Thousand Songs, ad-free</h1>
+        <h1 className={styles.heroText}>Over thousands podcast episodes</h1>
       </div>
-    </div>
+      <img className={styles.heroImg} src={HeroImg} alt="HeroImage" width="250" height="200"></img>
+    </section>
   );
 }
-
-export default YourComponent;

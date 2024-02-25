@@ -1,3 +1,9 @@
+.herosection{
+  display:flex;
+  background-color: black;
+  align-items:center;
+  justify-content: center;
+}
 .HeroContainer {
     height: 270px;
     display: flex;
@@ -6,16 +12,23 @@
     gap: 3rem;
     color: #fff;
     width: 1440px;
-    top: 74px;
+    margin-top: 74px;
 
     /* background-color: black; */
   }
-  .HeroText {
+  .heroText {
     text-align: center;
     font-family: 'Poppins';
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    color:white;
     
+  }
+  .headerDiv{
+
+  }
+  .heroImg{
+    padding-left: 10px;
   }
