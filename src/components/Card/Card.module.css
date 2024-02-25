@@ -1,3 +1,6 @@
+body{
+  background-color:black;
+}
 .cardContainer {
     display: flex;
     flex-direction: column;
@@ -73,4 +76,11 @@
       margin-top: 6px;
       overflow: hidden;
       text-overflow: ellipsis;
+  }
+.backgroundBlack{
+    background-color: black;
+    color:white;
+  }
+  .borderGreen{
+    border-top: 1px solid green;
   }

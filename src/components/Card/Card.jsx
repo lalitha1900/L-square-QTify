@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
+import Stack from '@mui/material/Stack';
 
 const Card = ({ data, type }) => {
   const getCard = (type) => {
@@ -15,12 +16,14 @@ const Card = ({ data, type }) => {
               <div className={Styles.card}>
                 <img src={image} alt="album"/>
                 <div className={Styles.banner}>
+                <Stack direction="row" spacing={1}>
                   <Chip
                     className={Styles.chip}
                     label={`${follows} Follows`}
                     
                     size="small"
                   />
+                   </Stack>
                 </div>
               </div>
               <div className={Styles.titleWrapper}>
