@@ -8,7 +8,7 @@ const Card = ({ data, type }) => {
     switch (type) {
       case "album": {
         const { image, follows, title, songs } = data;
-        console.log(image, follows, title, songs,data ,"songs")
+        //console.log(image, follows, title, songs,data ,"songs")
 
         return (
           <Tooltip title={`${songs.length} songs`} placement="top" arrow >
@@ -33,11 +33,38 @@ const Card = ({ data, type }) => {
           </Tooltip>
         );
       }
+      case "songs": {
+        const { image, likes, title } = data;
+        //console.log(image, likes, title ,data ,"songs1")
+
+        return (
+          <Tooltip title={`${data.length} songs`} placement="top" arrow >
+            <div className={Styles.wrapper}>
+              <div className={Styles.card}>
+                <img className={Styles.cardImg} src={image} alt="album"/>
+                <div className={Styles.banner}>
+                <Stack direction="row" spacing={1}>
+                  <Chip
+                    className={Styles.chip}
+                    label={`${likes} Likes`}
+                    
+                    size="small"
+                  />
+                   </Stack>
+                </div>
+              </div>
+              <div className={Styles.titleWrapper}>
+                <p>{title}</p>
+              </div>
+            </div>
+          </Tooltip>
+        );
+      }
       default:
         return <></>;
     }
   };
-  console.log(data,type);
+  //console.log(data,type);
   return getCard(type);
 };
 

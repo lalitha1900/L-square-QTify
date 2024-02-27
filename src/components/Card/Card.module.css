@@ -100,3 +100,6 @@ body{
 .cardImg{
   max-width:160px;
 }
+.colorWhite{
+  color:white !important;
+}

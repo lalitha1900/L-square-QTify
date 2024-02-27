@@ -16,7 +16,7 @@ const Carousel =({ data,createComponent,type })  =>{
         spaceBetween={100}
         slidesPerView={'auto'}
         onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+       
        
 
          >
