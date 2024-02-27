@@ -6,8 +6,8 @@ import Carousel from '../Carousel/Carousel';
 const CardCategory = ({category,header}) => {
     const [type ,setType] = useState('');
     const [entireData,setEntireData] = useState([]);
-    const [btnLabel,setBtnLabel] = useState("collapse");
-    const [isShowAll,setIsShowAll] = useState(true);
+    const [btnLabel,setBtnLabel] = useState("show all");
+    const [isShowAll,setIsShowAll] = useState(false);
     const [cardsData,setCardsData] = useState([]);
     const [categoryType,setcategoryType] = useState(category);
     function createCardData(value,index,type){
@@ -16,7 +16,7 @@ const CardCategory = ({category,header}) => {
     }
     const  toggleShowAll =()=> {
         if(isShowAll){
-          setBtnLabel("show All");
+          setBtnLabel("show all");
           var tempArr = [];
           for(var i=0;i<6;i++)
             tempArr.push(entireData[i]);
