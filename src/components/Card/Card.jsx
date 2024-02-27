@@ -14,7 +14,7 @@ const Card = ({ data, type }) => {
           <Tooltip title={`${songs.length} songs`} placement="top" arrow >
             <div className={Styles.wrapper}>
               <div className={Styles.card}>
-                <img src={image} alt="album"/>
+                <img className={Styles.cardImg} src={image} alt="album"/>
                 <div className={Styles.banner}>
                 <Stack direction="row" spacing={1}>
                   <Chip

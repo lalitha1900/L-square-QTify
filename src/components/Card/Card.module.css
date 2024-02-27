@@ -47,8 +47,8 @@ body{
   }
   .card{
       position: relative;
-      width:160px;
-      height: 205px;
+      /*width:160px;
+      height: 205px;*/
       border-radius: 10px;
       overflow: hidden;
       
@@ -96,4 +96,7 @@ body{
   background: none;
   font-size: 17px;
   cursor:pointer;
+}
+.cardImg{
+  max-width:160px;
 }

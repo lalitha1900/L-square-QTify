@@ -1,6 +1,7 @@
 import Card from './Card';
 import React,{useState,useEffect} from 'react';
 import Styles from "./Card.module.css";
+import Carousel from '../Carousel/Carousel';
 
 const CardCategory = ({category,header}) => {
     const [type ,setType] = useState('');
@@ -8,6 +9,11 @@ const CardCategory = ({category,header}) => {
     const [btnLabel,setBtnLabel] = useState("collapse");
     const [isShowAll,setIsShowAll] = useState(true);
     const [cardsData,setCardsData] = useState([]);
+    const [categoryType,setcategoryType] = useState(category);
+    function createCardData(value,index,type){
+      
+     return  <Card key={index} data={value} type={type}/>
+    }
     const  toggleShowAll =()=> {
         if(isShowAll){
           setBtnLabel("show All");
@@ -24,8 +30,8 @@ const CardCategory = ({category,header}) => {
     }
     useEffect(()=>{
         async function  getData(){
-            console.log(category);
-            var data = await fetch('https://qtify-backend-labs.crio.do/albums/'+category);
+            console.log("category :: ",categoryType);
+            var data = await fetch('https://qtify-backend-labs.crio.do/albums/'+categoryType);
             if(data.ok){
                 var jsonData = await data.json();
                 if(jsonData.length>0){
@@ -34,6 +40,7 @@ const CardCategory = ({category,header}) => {
                 }
             }
         }
+        setcategoryType(category);  
         getData();
       },[]);
       
@@ -43,14 +50,23 @@ const CardCategory = ({category,header}) => {
         <h1 className="albumHeading">{header}</h1>
         <button onClick={toggleShowAll} className={Styles.showAll}>{btnLabel}</button>
       </div>
-    <section className="cardSection"> 
-   
-        {cardsData.map(function(value,index){
-              console.log(value,type);
-              return(<Card key={index} data={value} type={'album'}/>)
-        })}
     
-    </section>
+   
+        {isShowAll ?
+          (<section className="cardSection"> 
+              {
+                cardsData.map(function(value,index){
+                  console.log(value,type);
+                  return(<Card key={index} data={value} type={'album'}/>)
+                })
+              }
+          </section>)
+              
+            : <Carousel data={entireData} createComponent={createCardData} type={"album"}></Carousel>
+          
+      }
+    
+   
   </section>
     );
 }

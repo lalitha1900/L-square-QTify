@@ -15,8 +15,8 @@ function App() {
     <>
     <NavBar/>
    <HeroSection/>
-   <CardCategory category="top"header="Top Albums" ></CardCategory>
-   <CardCategory category="new" header="New" ></CardCategory>
+   <CardCategory category="top" header="Top Albums" ></CardCategory>
+   <CardCategory category="new" header="New Albums" ></CardCategory>
    </>
    
   );
